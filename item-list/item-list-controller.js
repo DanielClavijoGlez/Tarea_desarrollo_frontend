@@ -1,12 +1,16 @@
+import { dispatchEvent } from "../utils/dispatch-event.js";
 import { getItems } from "./item-list-model.js";
 import { buildEmptyItemsList, buildItem } from "./item-list-view.js";
 
 export async function itemListController(itemList) {
   try {
+    dispatchEvent("load-spinner-event", {}, itemList);
     const items = await getItems();
     renderItems(items, itemList);
   } catch (error) {
     alert(error);
+  } finally {
+    dispatchEvent("load-spinner-event", {}, itemList);
   }
 }
 

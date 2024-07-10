@@ -13,6 +13,10 @@ html {
   font-family: "poppins", sans-serif;
 }
 
+.loader-spinner:has(> .lds-ring) {
+  margin: 7.5rem 0 0 10rem;
+}
+
 .items-list {
   width: min(70vw, 1000px);
   margin-inline: auto;
