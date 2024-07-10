@@ -8,7 +8,9 @@ export async function itemListController(itemList) {
     const items = await getItems();
     renderItems(items, itemList);
   } catch (error) {
-    alert(error);
+    dispatchEvent("item-list-notification", {
+      message: error
+    }, itemList);
   } finally {
     dispatchEvent("load-spinner-event", {}, itemList);
   }

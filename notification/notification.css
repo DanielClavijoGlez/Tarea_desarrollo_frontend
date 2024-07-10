@@ -1,0 +1,26 @@
+.notification {
+  width: fit-content;
+  border: 1px solid black;
+  box-shadow: 0 0 1rem black;
+}
+
+.notification:has(> p) {
+  padding: 1rem;
+  margin: 1.5rem 0 0 2rem;
+}
+
+.notification:has(> p.error) {
+  --_error-color: red;
+
+  border-color: var(--_error-color);
+  color: var(--_error-color);
+  box-shadow: 0 0 1rem var(--_error-color);
+}
+
+.notification:has(> p.success) {
+  --_success-color: limegreen;
+
+  border-color: var(--_success-color);
+  color: var(--_success-color);
+  box-shadow: 0 0 1rem var(--_success-color);
+}
