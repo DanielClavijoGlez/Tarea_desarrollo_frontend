@@ -64,26 +64,41 @@ html {
   text-overflow: ellipsis;
 }
 
-.login-form {
+.signup-description {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  font-size: 1.125rem;
+}
+
+.signup-description > .dev-notes {
+  font-weight: 600;
+}
+
+.login-form,
+.signup-form {
   width: fit-content;
   margin-inline: auto;
   padding: 5rem;
 }
 
-.login-form > fieldset {
+:is(.login-form, .signup-form) > fieldset {
   border: none;
   margin-bottom: 2rem;
 }
 
-.login-form > input[type="submit"],
-.login-form > fieldset > input {
+:is(.login-form, .signup-form) > input[type="submit"],
+:is(.login-form, .signup-form) > fieldset > input {
   font-size: 1rem;
   margin-left: 0.5rem;
   border-color: #000;
   padding: 0.25em;
 }
 
-.login-form > input[type="submit"] {
+:is(.login-form, .signup-form) > input[type="submit"] {
   display: block;
   width: fit-content;
   margin-inline: auto;

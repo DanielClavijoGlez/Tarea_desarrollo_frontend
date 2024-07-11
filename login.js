@@ -5,10 +5,10 @@ import { notificationController } from "./notification/notification-controller.j
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector(".login-form");
   const loaderSpinner = document.querySelector(".loader-spinner");
-  const notification = document.querySelector(".notification");
+  const notifications = document.querySelector(".notifications");
 
   const { toggleLoaderSpinner } = loaderSpinnerController(loaderSpinner);
-  const { showNotification } = notificationController(notification);
+  const { showNotification } = notificationController(notifications);
 
   loginForm.addEventListener("load-spinner-event", () => {
     toggleLoaderSpinner();

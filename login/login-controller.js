@@ -21,7 +21,7 @@ async function submitLogin(loginForm) {
     }, loginForm);
     localStorage.setItem("token", jwt);
     setTimeout(() => {
-      window.location = "./index.html"
+      window.location.href = "./index.html"
     }, 2000);
   } catch (error) {
     dispatchEvent("login-notification", {

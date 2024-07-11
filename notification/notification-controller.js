@@ -2,9 +2,14 @@ import { buildNotification } from "./notification-view.js";
 
 export function notificationController(notificationDiv) {
   function showNotification(message, type = "error") {
-    notificationDiv.innerHTML = buildNotification(message, type);
+    const notification = document.createElement("div");
+    notification.classList.add("notification", type);
+
+    notification.innerHTML = buildNotification(message, type);
+    notificationDiv.appendChild(notification);
+
     setTimeout(() => {
-      notificationDiv.innerHTML = "";
+      notification.remove(notification);
     }, 3000);
   }
 

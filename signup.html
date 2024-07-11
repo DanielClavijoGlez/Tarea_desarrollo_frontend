@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="load-spinner/load-spinner.css" />
+    <link rel="stylesheet" href="notification/notification.css" />
+  </head>
+  <body>
+    <p class="signup-description">
+      Once you register successfully you will be directly redirected to the
+      login page so you can login with the user you just created.
+      <span class="dev-notes"
+        >Para la corrección: al yo probar esta página en mi ordenador por lo que
+        sea el preventDefault al evento submit me funciona menos la parte de
+        recargar la pantalla, que sí lo hace. Para solventar esto tuve que hacer
+        la redirección después de crear al usuario a la página de login sin el
+        setTimeout porque si lo ponía la página se recargaba completamente
+        primero y luego no hacía la redirección; además como la página se
+        recarga el spinner y la notificación se ven solo un instante. Por este
+        motivo cuando el registro se haga correctamente no se van a ver la
+        notificación ni el spinner, o se van a ver pero muy poco tiempo.</span
+      >
+    </p>
+    <main>
+      <form class="signup-form">
+        <fieldset class="form-group">
+          <label for="username">Username: </label>
+          <input type="text" id="username" name="username" required />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password" required />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="confirm-password">Confirm password: </label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+        </fieldset>
+
+        <input type="submit" value="Signup" />
+      </form>
+
+      <div class="loader-spinner"></div>
+      <div class="notifications"></div>
+    </main>
+
+    <script type="module" src="signup.js"></script>
+  </body>
+</html>
