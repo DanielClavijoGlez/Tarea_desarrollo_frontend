@@ -79,29 +79,41 @@ html {
 }
 
 .login-form,
-.signup-form {
+.signup-form,
+.create-advert-form {
   width: fit-content;
   margin-inline: auto;
   padding: 5rem;
 }
 
-:is(.login-form, .signup-form) > fieldset {
+:is(.login-form, .signup-form, .create-advert-form) > fieldset {
   border: none;
   margin-bottom: 2rem;
 }
 
-:is(.login-form, .signup-form) > input[type="submit"],
-:is(.login-form, .signup-form) > fieldset > input {
+:is(.login-form, .signup-form, .create-advert-form) > input[type="submit"],
+:is(.login-form, .signup-form, .create-advert-form) > fieldset > input {
   font-size: 1rem;
   margin-left: 0.5rem;
   border-color: #000;
   padding: 0.25em;
 }
 
-:is(.login-form, .signup-form) > input[type="submit"] {
+:is(.login-form, .signup-form, .create-advert-form) > input[type="submit"] {
   display: block;
   width: fit-content;
   margin-inline: auto;
   padding-inline: 0.5em;
   border-radius: 0.25em;
+}
+
+.create-advert-form select {
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  margin-left: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.create-advert-form textarea {
+  font-size: 1rem;
 }

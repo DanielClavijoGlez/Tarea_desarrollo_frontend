@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Advert</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="load-spinner/load-spinner.css" />
+    <link rel="stylesheet" href="notification/notification.css" />
+  </head>
+  <body>
+    <main>
+      <form class="create-advert-form">
+        <fieldset class="form-group">
+          <label for="title">Title: </label>
+          <input type="text" id="title" name="title" required />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="price">Price: </label>
+          <input type="text" id="price" name="price" required />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="type">Type: </label>
+          <select id="type" name="type">
+            <option value="buy" selected>Buy</option>
+            <option value="sell">Sell</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="image">Image: </label>
+          <input type="file" id="image" name="image" />
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="description">Description: </label>
+          <textarea id="description" name="description" rows="4" cols="25" required></textarea>
+        </fieldset>
+
+        <input type="submit" value="Create advert" />
+      </form>
+
+      <div class="loader-spinner"></div>
+      <div class="notifications"></div>
+    </main>
+
+    <script type="module" src="create-advert.js"></script>
+  </body>
+</html>
