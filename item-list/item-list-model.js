@@ -1,7 +1,7 @@
 function parseItems(data) {
   return data.map(data => ({
     image: data.image || "http://localhost:8000//default-image.jpg",
-    name: data.name,
+    name: data.title,
     description: data.description,
     price: data.price.concat(" $"),
     type: data.type,

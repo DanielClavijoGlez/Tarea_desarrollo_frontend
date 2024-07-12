@@ -7,6 +7,7 @@ export function sessionHeaderController(sessionHeader) {
     logoutButton.addEventListener("click", () => {
       localStorage.removeItem("token");
       sessionHeader.innerHTML = buildNotLoggedSession();
+      window.location.reload();
     });
   } else {
     sessionHeader.innerHTML = buildNotLoggedSession();
